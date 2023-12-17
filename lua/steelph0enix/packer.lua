@@ -1,51 +1,51 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
-	-- packer
-	use 'wbthomason/packer.nvim'
+    -- packer
+    use 'wbthomason/packer.nvim'
 
-	-- color schemes
-	use 'rebelot/kanagawa.nvim'
+    -- color schemes
+    use 'rebelot/kanagawa.nvim'
 
-	-- telescope, for finding/grepping
-	use {
-		'nvim-telescope/telescope.nvim', branch = '0.1.x',
-		requires = { {'nvim-lua/plenary.nvim'} }
-	}
+    -- telescope, for finding/grepping
+    use {
+        'nvim-telescope/telescope.nvim', branch = '0.1.x',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
 
-	-- treesitter, for syntax
-	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    -- treesitter, for syntax
+    use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
-	-- lsp-zero, for LSP
-	use {
-		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v3.x',
-		requires = {
-			-- Mason for installing LSPs
-			{'williamboman/mason.nvim'},
-			{'williamboman/mason-lspconfig.nvim'},
-			-- LSP Support
-			{'neovim/nvim-lspconfig'},
-			-- Autocompletion
-			{'hrsh7th/nvim-cmp'},
-			{'hrsh7th/cmp-nvim-lsp'},
-			{'L3MON4D3/LuaSnip'},
-		}
-	}
+    -- lsp-zero, for LSP
+    use {
+        'VonHeikemen/lsp-zero.nvim',
+        branch = 'v3.x',
+        requires = {
+            -- Mason for installing LSPs
+            {'williamboman/mason.nvim'},
+            {'williamboman/mason-lspconfig.nvim'},
+            -- LSP Support
+            {'neovim/nvim-lspconfig'},
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},
+            {'hrsh7th/cmp-nvim-lsp'},
+            {'L3MON4D3/LuaSnip'},
+        }
+    }
 
-	-- nvim-tree, for file tree
-	use {
-		'nvim-tree/nvim-tree.lua',
-		requires = {
-			'nvim-tree/nvim-web-devicons',
-		},
-	}
+    -- nvim-tree, for file tree
+    use {
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons',
+        },
+    }
 
-	-- trouble, for better errors/warning list
-	use {
-		'folke/trouble.nvim',
-		requires = {
-			'nvim-tree/nvim-web-devicons',
-		},
-	}
+    -- trouble, for better errors/warning list
+    use {
+        'folke/trouble.nvim',
+        requires = {
+            'nvim-tree/nvim-web-devicons',
+        },
+    }
 end)

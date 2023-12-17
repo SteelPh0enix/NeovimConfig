@@ -4,7 +4,7 @@ vim.g.loaded_netrwPlugin = 1
 vim.opt.termguicolors = true
 
 require('nvim-tree').setup {
-	view = {
-		width = 40,
-	},
+    view = {
+        width = 40,
+    },
 }
