@@ -7,16 +7,16 @@ return require('packer').startup(function(use)
 	-- color schemes
 	use 'rebelot/kanagawa.nvim'
 
-	-- telescope
+	-- telescope, for finding/grepping
 	use {
 		'nvim-telescope/telescope.nvim', branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
-	-- treesitter
+	-- treesitter, for syntax
 	use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
-	-- lsp-zero
+	-- lsp-zero, for LSP
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v3.x',
@@ -33,9 +33,17 @@ return require('packer').startup(function(use)
 		}
 	}
 
-	-- nvim-tree
+	-- nvim-tree, for file tree
 	use {
 		'nvim-tree/nvim-tree.lua',
+		requires = {
+			'nvim-tree/nvim-web-devicons',
+		},
+	}
+
+	-- trouble, for better errors/warning list
+	use {
+		'folke/trouble.nvim',
 		requires = {
 			'nvim-tree/nvim-web-devicons',
 		},
