@@ -10,9 +10,6 @@ vim.keymap.set('n', '<Leader>lp',
     function() require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: ')) end)
 vim.keymap.set('n', '<Leader>dr', function() require('dap').repl.open() end)
 vim.keymap.set('n', '<Leader>dl', function() require('dap').run_last() end)
-vim.keymap.set({ 'n', 'v' }, '<Leader>dh', function()
-    require('dap.ui.widgets').hover()
-end)
 vim.keymap.set({ 'n', 'v' }, '<Leader>dp', function()
     require('dap.ui.widgets').preview()
 end)
@@ -62,3 +59,29 @@ dap.configurations.cpp = {
 
 dap.configurations.c = dap.configurations.cpp
 dap.configurations.rust = dap.configurations.cpp
+
+-- Python DAP config
+local python_dap = require('dap-python')
+
+if vim.loop.os_uname().sysname == "Windows_NT" then
+    python_dap.setup('~/.virtualenvs/debugpy/Scripts/python.exe')
+else
+    python_dap.setup('~/.virtualenvs/debugpy/bin/python')
+end
+
+python_dap.test_runner = 'pytest'
+
+dap.configurations.python = {
+    {
+        name = 'Debug current file in project',
+        type = 'python',
+        request = 'launch',
+        program = '${file}',
+        env = {
+            PYTHONPATH = '${workspaceFolder}',
+        }
+    },
+}
+
+vim.keymap.set('n', '<Leader>dm', python_dap.test_method)
+vim.keymap.set('n', '<Leader>dc', python_dap.test_class)
