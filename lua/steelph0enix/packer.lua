@@ -65,4 +65,10 @@ return require('packer').startup(function(use)
 
     -- debug adapter for Python
     use { 'mfussenegger/nvim-dap-python', requires = { 'mfussenegger/nvim-dap' } }
+
+    -- intent guides
+    use 'lukas-reineke/indent-blankline.nvim'
+
+    -- rainbow delimiters
+    use 'HiPhish/rainbow-delimiters.nvim'
 end)
