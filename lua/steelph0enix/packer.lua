@@ -71,4 +71,7 @@ return require('packer').startup(function(use)
 
     -- rainbow delimiters
     use 'HiPhish/rainbow-delimiters.nvim'
+
+    -- bracket pairing
+    use 'echasnovski/mini.nvim'
 end)
