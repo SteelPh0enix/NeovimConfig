@@ -1,4 +1,5 @@
 local lsp_zero = require('lsp-zero')
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 lsp_zero.on_attach(function(client, bufnr)
     lsp_zero.default_keymaps({ buffer = bufnr })
@@ -19,9 +20,6 @@ lspconfig.pylsp.setup {
     settings = {
         pylsp = {
             plugins = {
-                autopep8 = { enabled = false },
-                flake8 = { enabled = false },
-                jedi_completion = { enabled = true, fuzzy = true },
                 pycodestyle = {
                     maxLineLength = 100,
                 },
@@ -34,4 +32,5 @@ lspconfig.pylsp.setup {
             },
         },
     },
+    capabilities = capabilities,
 }
