@@ -1,6 +1,6 @@
 require('nvim-treesitter.configs').setup({
     -- List of languages to support
-    ensure_installed = {'c', 'cpp', 'vimdoc', 'lua', 'python', 'rust', 'markdown' },
+    ensure_installed = { 'c', 'cpp', 'vimdoc', 'lua', 'python', 'rust', 'markdown' },
     -- Install parsers synchronously
     sync_install = false,
     -- Auto-install missing parsers when entering buffer

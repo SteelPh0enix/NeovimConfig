@@ -35,3 +35,9 @@ vim.opt.termguicolors = true
 
 -- Enable setting the window title by nvim
 vim.opt.title = true
+
+-- Enable undo
+vim.opt.undofile = true
+
+-- Set better popup experience
+vim.opt.completeopt = { 'menuone', 'preview', 'noselect' }

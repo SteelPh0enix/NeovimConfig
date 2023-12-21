@@ -6,4 +6,3 @@ vim.keymap.set('n', '<Leader>td', function() trouble.toggle('document_diagnostic
 vim.keymap.set('n', '<Leader>tq', function() trouble.toggle('quickfix') end)
 vim.keymap.set('n', '<Leader>tl', function() trouble.toggle('loclist') end)
 vim.keymap.set('n', '<Leader>gR', function() trouble.toggle('lsp_references') end)
-

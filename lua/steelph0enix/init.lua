@@ -1,5 +1,5 @@
 if vim.loop.os_uname().sysname == "Windows_NT" then
-        require("steelph0enix.powershell")
+    require("steelph0enix.powershell")
 end
 
 require("steelph0enix.options")
