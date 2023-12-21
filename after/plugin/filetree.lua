@@ -1,8 +1,8 @@
+-- disable built-in file manager
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-vim.opt.termguicolors = true
-
+-- nvim-tree requires 24-bit color palette, so termguicolors should be set to true
 require('nvim-tree').setup {
     view = {
         width = 40,
