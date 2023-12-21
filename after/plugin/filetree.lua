@@ -8,3 +8,6 @@ require('nvim-tree').setup {
         width = 40,
     },
 }
+
+local tree_api = require('nvim-tree.api')
+vim.keymap.set('n', '<Leader>fs', tree_api.tree.toggle)
