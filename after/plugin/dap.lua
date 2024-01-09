@@ -63,12 +63,7 @@ dap.configurations.rust = dap.configurations.cpp
 -- Python DAP config
 local python_dap = require('dap-python')
 
-if vim.loop.os_uname().sysname == "Windows_NT" then
-    python_dap.setup('~/.virtualenvs/debugpy/Scripts/python.exe')
-else
-    python_dap.setup('~/.virtualenvs/debugpy/bin/python')
-end
-
+python_dap.setup(vim.g.python3_host_prog)
 python_dap.test_runner = 'pytest'
 
 dap.configurations.python = {
