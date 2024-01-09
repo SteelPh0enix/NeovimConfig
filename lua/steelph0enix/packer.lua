@@ -33,6 +33,9 @@ return require('packer').startup(function(use)
         }
     }
 
+    -- Rust tools
+    use 'simrat39/rust-tools.nvim'
+
     -- nvim-tree, for file tree
     use {
         'nvim-tree/nvim-tree.lua',
