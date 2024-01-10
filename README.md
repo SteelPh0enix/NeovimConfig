@@ -114,7 +114,8 @@ Leader is bound to `<Space>`.
 
 - Find files - `<Ctrl-f>f`
 - Find git (project) files - `<Ctrl-f>p`
-- Grep string in files - `<Ctrl-f>g`
+- Grep string in files - `<Ctrl-f>w`
+- Live grep - `<Ctrl-f>g`
 - Find in open buffers - `<Ctrl-f>o`
 
 ### Trouble
