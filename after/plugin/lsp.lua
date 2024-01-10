@@ -48,3 +48,17 @@ lspconfig.pylsp.setup {
     },
     capabilities = capabilities,
 }
+
+lspconfig.clangd.setup {
+    settings = {
+        clangd = {
+            cmd = {
+                "clangd", "--background-index", "--clang-tidy", "--header-insertion=never"
+            }
+        }
+    },
+    capabilities = capabilities
+}
+
+-- add clangd switch header/source keybind in c/cpp files
+vim.keymap.set('n', '<Leader>hs', '<cmd>ClangdSwitchSourceHeader<cr>')
