@@ -104,6 +104,7 @@ Leader is bound to `<Space>`.
 - Rename - `<F2>`
 - Format - `<F3>`
 - Code action - `<F4>`
+- Switch header/source (clangd) - `<Leader>hs`
 
 ### Rust tools
 
