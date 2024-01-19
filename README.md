@@ -88,7 +88,8 @@ Leader is bound to `<Space>`.
 
 ### Filetree
 
-- Toggle file tree - `<Leader>fs`
+- Toggle filetree - `<Leader>fs`
+- Find current buffer on filetree - `<Leader>ff`
 
 ### LSP
 
