@@ -41,3 +41,8 @@ vim.opt.undofile = true
 
 -- Set better popup experience
 vim.opt.completeopt = { 'menuone', 'preview', 'noselect' }
+
+-- Default spell check file
+-- (we pick the 1st one and hope for the best)
+vim.opt.spellfile = vim.fn.resolve(vim.api.nvim_list_runtime_paths()[1] ..
+    PATH_SEPARATOR() .. 'spelldict.utf-8.add')
