@@ -14,6 +14,7 @@ Make sure you've installed (and added to *PATH* where applicable)
 * C/C++ toolchain (GCC preferably)
 * [cpptools](https://github.com/microsoft/vscode-cpptools/releases) - unzip to `cpptools` in user directory (see `after/plugin/dap.lua` for details)
 * Ripgrep/fd for Telescope
+* NodeJS (for Markdown plugin)
 * [Packer](https://github.com/wbthomason/packer.nvim)
 
 ## Installation
