@@ -8,7 +8,7 @@ end)
 require('mason').setup({})
 
 require('mason-lspconfig').setup({
-    ensure_installed = { 'clangd', 'lua_ls', 'rust_analyzer', 'pylsp', 'ruff_lsp' },
+    ensure_installed = { 'clangd', 'lua_ls', 'rust_analyzer', 'pylsp', 'ruff_lsp', 'marksman' },
     handlers = {
         lsp_zero.default_setup,
     },
@@ -62,3 +62,5 @@ lspconfig.clangd.setup {
 
 -- add clangd switch header/source keybind in c/cpp files
 vim.keymap.set('n', '<Leader>hs', '<cmd>ClangdSwitchSourceHeader<cr>')
+
+lspconfig.marksman.setup {}
