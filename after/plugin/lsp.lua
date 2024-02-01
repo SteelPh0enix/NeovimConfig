@@ -3,6 +3,7 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
 lsp_zero.on_attach(function(client, bufnr)
     lsp_zero.default_keymaps({ buffer = bufnr })
+    vim.keymap.set({'n', 'v'}, '<Leader>ca', vim.lsp.buf.code_action)
 end)
 
 require('mason').setup({})
