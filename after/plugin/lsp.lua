@@ -52,14 +52,14 @@ lspconfig.pylsp.setup {
 }
 
 lspconfig.clangd.setup {
-    settings = {
-        clangd = {
-            cmd = {
-                "clangd", "--background-index", "--clang-tidy", "--header-insertion=never"
-            }
-        }
-    },
-    capabilities = capabilities
+    cmd = {
+        "clangd",
+        "--background-index",
+        "--clang-tidy",
+        "--header-insertion=never",
+        "--completion-style=detailed",
+        "--function-arg-placeholders",
+    }
 }
 
 -- add clangd switch header/source keybind in c/cpp files
