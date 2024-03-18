@@ -4,6 +4,9 @@ return require('packer').startup(function(use)
     -- packer
     use 'wbthomason/packer.nvim'
 
+    -- nvim-nio
+    use 'nvim-neotest/nvim-nio'
+
     -- color schemes
     use 'rebelot/kanagawa.nvim'
 
