@@ -13,6 +13,7 @@ Make sure you've installed (and added to *PATH* where applicable)
 * DebugPy installed in proper virtualenv (see `after/plugin/dap.lua` for details)
 * C/C++ toolchain (GCC preferably)
 * [cpptools](https://github.com/microsoft/vscode-cpptools/releases) - unzip to `cpptools` in user directory (see `after/plugin/dap.lua` for details)
+* ruff-lsp installed system-wide along with ruff
 * Ripgrep/fd for Telescope
 * NodeJS (for Markdown plugin)
 * [Packer](https://github.com/wbthomason/packer.nvim)

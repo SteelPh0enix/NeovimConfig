@@ -10,7 +10,7 @@ end)
 require('mason').setup({})
 
 require('mason-lspconfig').setup({
-    ensure_installed = { 'clangd', 'lua_ls', 'rust_analyzer', 'pylsp', 'ruff_lsp', 'marksman' },
+    ensure_installed = { 'clangd', 'lua_ls', 'rust_analyzer', 'pylsp', 'marksman' },
     handlers = {
         lsp_zero.default_setup,
     },
@@ -59,6 +59,14 @@ lspconfig.clangd.setup {
         "--header-insertion=never",
         "--completion-style=detailed",
         "--function-arg-placeholders",
+    }
+}
+
+lspconfig.ruff_lsp.setup {
+    init_options = {
+        settings = {
+            args = {},
+        }
     }
 }
 
