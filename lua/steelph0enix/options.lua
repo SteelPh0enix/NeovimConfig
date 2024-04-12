@@ -42,6 +42,9 @@ vim.opt.undofile = true
 -- Set better popup experience
 vim.opt.completeopt = { 'menuone', 'preview', 'noselect' }
 
+-- Set color column at 100 characters by default
+vim.opt.colorcolumn = "80,100,120"
+
 -- Default spell check file
 -- (we pick the 1st one and hope for the best)
 local spellfile_dir = vim.api.nvim_list_runtime_paths()[1]
