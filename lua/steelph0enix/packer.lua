@@ -90,4 +90,8 @@ return require('packer').startup(function(use)
         end,
         ft = { "markdown" },
     })
+
+    -- Jupyter support
+    use { 'dccsillag/magma-nvim', run = ':UpdateRemotePlugins' }
+
 end)
