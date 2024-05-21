@@ -32,7 +32,7 @@ return require('packer').startup(function(use)
             -- Autocompletion
             { 'hrsh7th/nvim-cmp' },
             { 'hrsh7th/cmp-nvim-lsp' },
-            { 'L3MON4D3/LuaSnip' },
+            { 'L3MON4D3/LuaSnip', run = 'make install_jsregexp' },
         }
     }
 
@@ -92,6 +92,8 @@ return require('packer').startup(function(use)
     })
 
     -- Jupyter support
-    use { 'dccsillag/magma-nvim', run = ':UpdateRemotePlugins' }
+    use { 'benlubas/molten-nvim', run = ':UpdateRemotePlugins' }
 
+    -- Wezterm plugin for molten
+    use 'willothy/wezterm.nvim'
 end)
