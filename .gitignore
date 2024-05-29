@@ -1,3 +1,4 @@
 /plugin
 *.add
 *.spl
+lazy-lock.json
