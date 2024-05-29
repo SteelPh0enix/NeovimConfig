@@ -4,7 +4,7 @@ This is a relatively simple and minimal NeoVim configuration for my daily needs.
 
 I janked the setup "skeleton" from [here](https://www.youtube.com/watch?v=w7i4amO_zaE). I recommend watching it if you're looking for your own setup.
 
-## Prerequisites
+## Requirements
 
 Make sure you've installed (and added to *PATH* where applicable)
 
@@ -16,7 +16,6 @@ Make sure you've installed (and added to *PATH* where applicable)
 * ruff-lsp installed system-wide along with ruff
 * Ripgrep/fd for Telescope
 * NodeJS (for Markdown plugin)
-* [Packer](https://github.com/wbthomason/packer.nvim)
 
 ## Installation
 
@@ -32,11 +31,11 @@ For Linux it's `~/.config/nvim`
 git clone git@github.com:SteelPh0enix/NeovimConfig.git ~/.config/nvim
 ```
 
-After that, run `:PackerSync`, wait until it finishes, and restart NeoVim.
+Lazy should automatically setup everything. Wait until Lazy, Mason and treesitter finishes installing stuff after first run.
 
 ## Plugin list
 
-- Packer - for plugin management, requires manual installation (see [prerequisites][#prerequisites])
+- Packer - for plugin management, requires manual installation (see [requirements][#requirements])
 - Telescope - search utility
 - Treesitter - syntax support
 - lsp-zero - bundle of LSP plugins, including
