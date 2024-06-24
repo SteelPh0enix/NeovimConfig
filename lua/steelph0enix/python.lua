@@ -3,4 +3,3 @@ if vim.loop.os_uname().sysname == "Windows_NT" then
 else
     vim.g.python3_host_prog = "/usr/bin/python3"
 end
-
