@@ -9,3 +9,8 @@ vim.keymap.set('n', '<F12>', vim.cmd.nohlsearch)
 
 -- Turn on spellchecking (fill up the language manually) kurw
 vim.keymap.set('n', '<Leader>sc', ':setlocal spell spelllang=')
+
+-- Enable/disable diff mode
+vim.keymap.set('n', '<Leader>dt', ':diffthis')
+vim.keymap.set('n', '<Leader>dd', ':diffoff!')
+vim.keymap.set('n', '<Leader>do', ':diffoff!')
