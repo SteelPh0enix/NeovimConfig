@@ -38,7 +38,7 @@ require('lazy').setup({
     {
         'L3MON4D3/LuaSnip',
         version = 'v2.*',
-        build = 'make install_jsregexp'
+        -- build = 'make install_jsregexp'
     },
     -- icons
     { 'nvim-tree/nvim-web-devicons' },
@@ -62,9 +62,12 @@ require('lazy').setup({
     { 'echasnovski/mini.nvim' },
     -- markdown preview
     {
-        'iamcco/markdown-preview.nvim',
-        cmd = { 'MarkdownPreviewToggle', 'MarkdownPreview', 'MarkdownPreviewStop' },
-        ft = { 'markdown' },
-        build = function() vim.fn['mkdp#util#install']() end,
-    }
+        "iamcco/markdown-preview.nvim",
+        cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+        build = "cd app && yarn install",
+        init = function()
+            vim.g.mkdp_filetypes = { "markdown" }
+        end,
+        ft = { "markdown" },
+    },
 })
