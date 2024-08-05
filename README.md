@@ -1,6 +1,6 @@
 # My NeoVim configuration files
 
-This is a relatively simple and minimal NeoVim configuration for my daily needs. I mostly write C, C++, Python and Rust, so this is a setup designed for that.
+This is a relatively simple and minimal NeoVim configuration for my daily needs. I mostly write C, C++, Python, so this is a setup designed for that.
 
 I janked the setup "skeleton" from [here](https://www.youtube.com/watch?v=w7i4amO_zaE). I recommend watching it if you're looking for your own setup.
 
@@ -43,7 +43,6 @@ Lazy should automatically setup everything. Wait until Lazy, Mason and treesitte
     - nvim-lspconfig for LSP support in neovim
     - nvim-cmp and cmp-nvim-lsp for autocompletion
     - LuaSnip for snippets
-- rust-tools
 - nvim-tree - filesystem browser
 - trouble - error/warnings list
 - lualine - better statusline
@@ -107,11 +106,6 @@ Leader is bound to `<Space>`.
 - Format - `<F3>`
 - Code action - `<F4>`
 - Switch header/source (clangd) - `<Leader>hs`
-
-### Rust tools
-
-- Hover actions - `<Leader>h`
-- Code action group - `<Leader>a`
 
 ### Telescope
 

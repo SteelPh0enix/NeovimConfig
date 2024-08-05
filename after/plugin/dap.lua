@@ -22,7 +22,7 @@ vim.keymap.set('n', '<Leader>ds', function()
     widgets.centered_float(widgets.scopes)
 end)
 
--- i'm using vscode-cpptools for C, C++ and Rust. I liked it in VSCode, i guess i should like it in here.
+-- i'm using vscode-cpptools for C and C++. I liked it in VSCode, i guess i should like it in here.
 -- Download the latest release from https://github.com/microsoft/vscode-cpptools/releases
 -- and unzip it to proper directory.
 
@@ -58,7 +58,6 @@ dap.configurations.cpp = {
 }
 
 dap.configurations.c = dap.configurations.cpp
-dap.configurations.rust = dap.configurations.cpp
 
 -- Python DAP config
 local python_dap = require('dap-python')

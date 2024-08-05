@@ -10,46 +10,13 @@ end)
 require('mason').setup({})
 
 require('mason-lspconfig').setup({
-    ensure_installed = { 'clangd', 'lua_ls', 'rust_analyzer', 'pylsp', 'marksman' },
+    ensure_installed = { 'clangd', 'lua_ls', 'ruff', 'marksman' },
     handlers = {
         lsp_zero.default_setup,
     },
 })
 
 local lspconfig = require('lspconfig')
-
-lspconfig.pylsp.setup {
-    settings = {
-        pylsp = {
-            plugins = {
-                -- we use ruff and mypy only
-                black = { enabled = false },
-                autopep8 = { enabled = false },
-                yapf = { enabled = false },
-                pylint = { enabled = false },
-                pyflakes = { enabled = false },
-                pycodestyle = { enabled = false },
-                ruff = {
-                    enabled = true,
-                    select = { 'F', 'E', 'W', 'C90', 'I', 'N', 'UP', 'ANN', 'FBT', 'B', 'A', 'C4', 'DTZ', 'FA', 'ISC', 'PIE', 'RET', 'SLF', 'SIM', 'TCH', 'PTH', 'PL', 'PERF', 'FLY' },
-                    format = { 'F', 'E', 'W', 'I' },
-                    lineLength = 100,
-                },
-                pylsp_mypy = {
-                    enabled = true,
-                    live_mode = true,
-                    strict = true,
-                },
-                -- also jedi for autocompletion i guess
-                jedi_completion = {
-                    enabled = true,
-                    fuzzy = true,
-                }
-            },
-        },
-    },
-    capabilities = capabilities,
-}
 
 lspconfig.clangd.setup {
     cmd = {
@@ -59,14 +26,6 @@ lspconfig.clangd.setup {
         "--header-insertion=never",
         "--completion-style=detailed",
         "--function-arg-placeholders",
-    }
-}
-
-lspconfig.ruff_lsp.setup {
-    init_options = {
-        settings = {
-            args = {},
-        }
     }
 }
 
@@ -106,3 +65,16 @@ lspconfig.lua_ls.setup {
         Lua = {}
     }
 }
+
+lspconfig.ruff.setup({
+    init_options = {
+        settings = {
+            lineLength = 88,
+            preview = true,
+            select = { "E", "F", "W", "C", "I", "N", "UP", "YTT", "ANN", "ASYNC", "S", "BLE", "FBT", "B", "A", "COM", "C4", "DTZ", "EXE", "A", "ISC", "ICN", "PIE", "RSE", "RET", "SLF", "SLOT", "SIM", "TID", "TCH", "ARG", "PTH", "PL", "FLY", "PERF", "FURB", "RUF" },
+            format = {
+                preview = true,
+            }
+        }
+    }
+})
