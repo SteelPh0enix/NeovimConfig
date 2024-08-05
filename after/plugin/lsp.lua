@@ -10,7 +10,7 @@ end)
 require('mason').setup({})
 
 require('mason-lspconfig').setup({
-    ensure_installed = { 'clangd', 'lua_ls', 'ruff', 'marksman' },
+    ensure_installed = { 'clangd', 'lua_ls', 'ruff', 'pyright', 'marksman' },
     handlers = {
         lsp_zero.default_setup,
     },
@@ -77,4 +77,21 @@ lspconfig.ruff.setup({
             }
         }
     }
+})
+
+lspconfig.pyright.setup({
+    settings = {
+        pyright = {
+            disableOrganizeImports = true,
+            disableTaggedHints = true,
+        },
+        python = {
+            analysis = {
+                diagnosticSeverityOverrides = {
+                    -- https://github.com/microsoft/pyright/blob/main/docs/configuration.md#type-check-diagnostics-settings
+                    reportUndefinedVariable = "none",
+                },
+            },
+        },
+    },
 })
