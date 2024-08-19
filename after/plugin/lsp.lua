@@ -68,7 +68,6 @@ lspconfig.lua_ls.setup {
 lspconfig.ruff.setup({
     init_options = {
         settings = {
-            lineLength = 88,
             preview = true,
             select = { "E", "F", "W", "C", "I", "N", "UP", "YTT", "ANN", "ASYNC", "S", "BLE", "FBT", "B", "A", "COM", "C4", "DTZ", "EXE", "A", "ISC", "ICN", "PIE", "RSE", "RET", "SLF", "SLOT", "SIM", "TID", "TCH", "ARG", "PTH", "PL", "FLY", "PERF", "FURB", "RUF" },
             format = {
