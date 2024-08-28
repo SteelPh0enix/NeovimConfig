@@ -70,6 +70,17 @@ require('lazy').setup({
         end,
         ft = { "markdown" },
     },
+    -- markdown renderer
+    {
+        'MeanderingProgrammer/render-markdown.nvim',
+        opts = {
+            file_types = { "markdown", "Avante" },
+        },
+        ft = { "markdown", "Avante" },
+        dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
+        -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
+        -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
+    },
     -- avante for LLM support
     {
         "yetone/avante.nvim",
@@ -82,18 +93,9 @@ require('lazy').setup({
             }
         },
         dependencies = {
-            "nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
             "stevearc/dressing.nvim",
             "nvim-lua/plenary.nvim",
             "MunifTanjim/nui.nvim",
-            --- The below is optional, make sure to setup it properly if you have lazy=true
-            {
-                'MeanderingProgrammer/render-markdown.nvim',
-                opts = {
-                    file_types = { "markdown", "Avante" },
-                },
-                ft = { "markdown", "Avante" },
-            },
         },
     }
 })
