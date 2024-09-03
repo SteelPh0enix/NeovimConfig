@@ -58,7 +58,7 @@ require('lazy').setup({
     { 'lukas-reineke/indent-blankline.nvim' },
     -- rainbow delimiters
     { 'HiPhish/rainbow-delimiters.nvim' },
-    -- bracket pairinig
+    -- bracket pairing
     { 'echasnovski/mini.nvim' },
     -- markdown preview
     {
@@ -77,14 +77,13 @@ require('lazy').setup({
             file_types = { "markdown", "Avante" },
         },
         ft = { "markdown", "Avante" },
-        dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
-        -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
-        -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
     },
     -- avante for LLM support
     {
         "yetone/avante.nvim",
         event = "VeryLazy",
+        lazy = false,
+        build = ":AvanteBuild source=false",
         opts = {
             provider = "openai",
             openai = {
@@ -96,6 +95,23 @@ require('lazy').setup({
             "stevearc/dressing.nvim",
             "nvim-lua/plenary.nvim",
             "MunifTanjim/nui.nvim",
+            {
+                -- support for image pasting
+                "HakonHarnes/img-clip.nvim",
+                event = "VeryLazy",
+                opts = {
+                    -- recommended settings
+                    default = {
+                        embed_image_as_base64 = false,
+                        prompt_for_file_name = false,
+                        drag_and_drop = {
+                            insert_mode = true,
+                        },
+                        -- required for Windows users
+                        use_absolute_path = true,
+                    },
+                },
+            },
         },
     }
 })
