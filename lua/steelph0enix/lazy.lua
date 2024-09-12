@@ -87,7 +87,7 @@ require('lazy').setup({
         opts = {
             provider = "openai",
             openai = {
-                endpoint = "http://192.168.1.125:51536/",
+                endpoint = "http://steelph0enix.pc:51536/",
                 ["local"] = true,
             }
         },
