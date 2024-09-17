@@ -91,7 +91,8 @@ require('lazy').setup({
                 ["local"] = true,
             }
         },
-        build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false",
+        build = "make",
+        -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false",
         dependencies = {
             "stevearc/dressing.nvim",
             "nvim-lua/plenary.nvim",
