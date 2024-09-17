@@ -83,7 +83,7 @@ require('lazy').setup({
         "yetone/avante.nvim",
         event = "VeryLazy",
         lazy = false,
-        build = ":AvanteBuild source=false",
+        version = false,
         opts = {
             provider = "openai",
             openai = {
@@ -91,6 +91,7 @@ require('lazy').setup({
                 ["local"] = true,
             }
         },
+        build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false",
         dependencies = {
             "stevearc/dressing.nvim",
             "nvim-lua/plenary.nvim",
