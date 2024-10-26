@@ -18,10 +18,15 @@ require('lazy').setup({
     { 'rebelot/kanagawa.nvim' },
     -- plenary tools
     { 'nvim-lua/plenary.nvim' },
-    -- telescope, find/grep tool
+    -- fzf-lua for finding stuff
     {
-        'nvim-telescope/telescope.nvim',
-        tag = '0.1.6',
+      'ibhagwan/fzf-lua',
+      -- optional for icon support
+      dependencies = { 'nvim-tree/nvim-web-devicons' },
+      config = function()
+        -- calling `setup` is optional for customization
+        require('fzf-lua').setup({})
+      end
     },
     -- treesitter
     {
@@ -92,8 +97,8 @@ require('lazy').setup({
                 ["local"] = true,
             }
         },
-        build = "make",
-        -- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false",
+        -- build = "make",
+        build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false",
         dependencies = {
             "stevearc/dressing.nvim",
             "nvim-lua/plenary.nvim",
