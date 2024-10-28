@@ -8,8 +8,40 @@ end)
 
 require('mason').setup({})
 
+-- commented out entries should be installed manually
 require('mason-lspconfig').setup({
-    ensure_installed = { 'clangd', 'lua_ls', 'ruff', 'pyright', 'marksman' },
+    ensure_installed = {
+        -- c/c++
+        'clangd',
+        'cpplint',
+
+        -- python
+        'ruff',
+        'pyright',
+        'mypy',
+
+        -- markdown
+        'marksman',
+        -- 'markdownlint',
+
+        -- shell
+        'bashls',
+        -- 'beautysh',
+        -- 'shellcheck',
+        -- 'shellharden',
+
+        -- lua
+        'lua_ls',
+
+        -- docker
+        'dockerls',
+        -- 'hadolint',
+
+        -- cmake
+        'cmake',
+        -- 'cmakelang',
+        -- 'cmakelint',
+    },
     handlers = {
         lsp_zero.default_setup,
     },
