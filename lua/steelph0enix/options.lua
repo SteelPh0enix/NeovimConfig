@@ -43,7 +43,11 @@ vim.opt.undofile = true
 vim.opt.completeopt = { 'menuone', 'preview', 'noselect' }
 
 -- Set color column at 100 characters by default
-vim.opt.colorcolumn = "80,100,120"
+vim.opt.colorcolumn = '80,100,120'
+
+-- Reserve a space in the gutter
+-- This will avoid an annoying layout shift in the screen
+vim.opt.signcolumn = 'yes'
 
 -- Default spell check file
 -- (we pick the 1st one and hope for the best)

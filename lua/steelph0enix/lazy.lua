@@ -30,10 +30,9 @@ require('lazy').setup({
         build = ':TSUpdate',
     },
     { 'nvim-treesitter/nvim-treesitter-textobjects' },
-    -- lsp tools from lsp-zero
+    -- lsp tools
     { 'williamboman/mason.nvim' },
     { 'williamboman/mason-lspconfig.nvim' },
-    { 'VonHeikemen/lsp-zero.nvim',                  branch = 'v3.x' },
     { 'neovim/nvim-lspconfig' },
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'hrsh7th/nvim-cmp' },
