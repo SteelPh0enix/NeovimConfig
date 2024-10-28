@@ -27,17 +27,20 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 require('mason').setup({})
 
+-- install missing mason packages listed below with this command
+vim.keymap.set('ca', 'MasonInstallMissing', 'MasonInstall cpplint mypy markdownlint beautysh shellcheck shellharden hadolint cmakelang cmakelint')
+
 -- commented out entries should be installed manually
 require('mason-lspconfig').setup({
     ensure_installed = {
         -- c/c++
         'clangd',
-        'cpplint',
+        -- 'cpplint',
 
         -- python
         'ruff',
         'pyright',
-        'mypy',
+        -- 'mypy',
 
         -- markdown
         'marksman',
