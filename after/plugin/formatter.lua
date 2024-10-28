@@ -56,5 +56,5 @@ formatter.setup({
 })
 
 vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>Format<cr>")
-vim.keymap.set({ "i", "v" }, "<Leader>ff", "<cmd>Format<cr>")
-vim.keymap.set({ "i", "v" }, "<Leader>fF", "<cmd>FormatWrite<cr>")
+vim.keymap.set({ "n", "x" }, "<Leader>ff", "<cmd>Format<cr>")
+vim.keymap.set({ "n", "x" }, "<Leader>fF", "<cmd>FormatWrite<cr>")
