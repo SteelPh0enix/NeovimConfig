@@ -1,3 +1,3 @@
-require('lualine').setup {
-    options = { theme = 'codedark' }
-}
+require("lualine").setup({
+	options = { theme = "codedark" },
+})
