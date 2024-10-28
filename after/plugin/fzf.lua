@@ -6,7 +6,7 @@ vim.keymap.set("n", "<c-F>b", fzf.buffers)
 vim.keymap.set("n", "<c-F>f", fzf.files)
 vim.keymap.set("n", "<c-F>q", fzf.quickfix)
 vim.keymap.set("n", "<c-F>g", fzf.live_grep)
-vim.keymap.set({ "n", "v" }, "<c-F>gc", fzf.grep_cword)
+vim.keymap.set({ "n", "v" }, "<c-F>w", fzf.grep_cword)
 vim.keymap.set("v", "<c-F>gv", fzf.grep_visual)
 
 vim.keymap.set("n", "<c-G>f", fzf.git_files)
