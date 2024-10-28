@@ -39,6 +39,10 @@ formatter.setup({
 			end,
 		},
 
+		zsh = {
+			require("formatter.filetypes.zsh").beautysh,
+		},
+
 		-- Use the special "*" filetype for defining formatter configurations on
 		-- any filetype
 		["*"] = {
@@ -51,5 +55,6 @@ formatter.setup({
 	},
 })
 
+vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>Format<cr>")
 vim.keymap.set({ "i", "v" }, "<Leader>ff", "<cmd>Format<cr>")
 vim.keymap.set({ "i", "v" }, "<Leader>fF", "<cmd>FormatWrite<cr>")

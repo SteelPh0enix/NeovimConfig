@@ -2,8 +2,6 @@
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 
--- expand tabs to spaces
-vim.opt.expandtab = true
 
 -- use system clipboard
 vim.opt.clipboard = "unnamedplus"
@@ -19,9 +17,12 @@ vim.opt.infercase = true
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+-- expand tabs to spaces
+vim.opt.expandtab = true
+
 -- let's try 4-space tabs
 vim.opt.tabstop = 4
-vim.opt.shiftwidth = 0
+vim.opt.shiftwidth = 4
 vim.opt.smarttab = true
 
 -- show full tabs on completion
