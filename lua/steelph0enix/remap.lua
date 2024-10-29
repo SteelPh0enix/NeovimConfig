@@ -14,3 +14,6 @@ vim.keymap.set("n", "<Leader>sc", ":setlocal spell spelllang=")
 vim.keymap.set("n", "<Leader>dt", ":diffthis")
 vim.keymap.set("n", "<Leader>dd", ":diffoff!")
 vim.keymap.set("n", "<Leader>do", ":diffoff!")
+
+-- normal save
+vim.keymap.set("n", "<C-s>", "<cmd>w<cr>")
