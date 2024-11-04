@@ -9,6 +9,7 @@ lint.linters_by_ft = {
 	dockerfile = { "hadolint", "cspell" },
 	markdown = { "markdownlint", "cspell" },
     cmake = { "cmakelint", "cspell" },
+    jenkinsfile = {"npm-groovy-lint", "cspell" }
 }
 
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {

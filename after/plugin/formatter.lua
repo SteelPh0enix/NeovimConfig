@@ -17,47 +17,61 @@ formatter.setup({
 			require("formatter.filetypes.lua").stylua,
 
 			-- You can also define your own configuration
-			function()
-				-- Supports conditional formatting
-				if util.get_current_buffer_file_name() == "special.lua" then
-					return nil
-				end
-
-				-- Full specification of configurations is down below and in Vim help
-				-- files
-				return {
-					exe = "stylua",
-					args = {
-						"--search-parent-directories",
-						"--stdin-filepath",
-						util.escape_path(util.get_current_buffer_file_path()),
-						"--",
-						"-",
-					},
-					stdin = true,
-				}
-			end,
+			-- function()
+			-- 	-- Supports conditional formatting
+			-- 	if util.get_current_buffer_file_name() == "special.lua" then
+			-- 		return nil
+			-- 	end
+			--
+			-- 	-- Full specification of configurations is down below and in Vim help
+			-- 	-- files
+			-- 	return {
+			-- 		exe = "stylua",
+			-- 		args = {
+			-- 			"--search-parent-directories",
+			-- 			"--stdin-filepath",
+			-- 			util.escape_path(util.get_current_buffer_file_path()),
+			-- 			"--",
+			-- 			"-",
+			-- 		},
+			-- 		stdin = true,
+			-- 	}
+			-- end,
 		},
 
 		zsh = {
 			require("formatter.filetypes.zsh").beautysh,
 		},
 
-        c = {
-            require("formatter.filetypes.c").clangformat,
-        },
+		c = {
+			require("formatter.filetypes.c").clangformat,
+		},
 
-        cpp = {
-            require("formatter.filetypes.cpp").clangformat,
-        },
+		cpp = {
+			require("formatter.filetypes.cpp").clangformat,
+		},
 
-        python = {
-            require("formatter.filetypes.python").ruff,
-        },
+		python = {
+			require("formatter.filetypes.python").ruff,
+		},
 
-        markdown = {
-            require("formatter.filetypes.markdown").mdformat,
-        },
+		markdown = {
+			require("formatter.filetypes.markdown").mdformat,
+		},
+
+		groovy = {
+			function()
+				return {
+					exe = "npm-groovy-lint",
+					args = {
+						"--parse",
+						"--fix",
+						"-",
+					},
+					stdin = true,
+				}
+			end,
+		},
 
 		-- Use the special "*" filetype for defining formatter configurations on
 		-- any filetype

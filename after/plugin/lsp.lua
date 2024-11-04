@@ -31,7 +31,7 @@ require("mason").setup({})
 vim.keymap.set(
 	"ca",
 	"MasonInstallMissing",
-	"MasonInstall cspell cpplint mypy markdownlint mdformat beautysh shellcheck shellharden stylua hadolint cmakelang cmakelint clang-format"
+	"MasonInstall cspell cpplint mypy markdownlint mdformat beautysh shellcheck shellharden stylua hadolint cmakelang cmakelint clang-format npm-groovy-lint"
 )
 
 -- commented out entries should be installed manually
@@ -45,6 +45,7 @@ require("mason-lspconfig").setup({
 		"lua_ls",
 		"dockerls",
 		"cmake",
+        "groovyls",
 	},
 })
 
@@ -159,3 +160,5 @@ lspconfig.pyright.setup({
 		},
 	},
 })
+
+lspconfig.groovyls.setup({})
