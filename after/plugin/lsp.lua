@@ -31,43 +31,20 @@ require("mason").setup({})
 vim.keymap.set(
 	"ca",
 	"MasonInstallMissing",
-	"MasonInstall codespell cpplint mypy markdownlint beautysh shellcheck shellharden stylua hadolint cmakelang cmakelint"
+	"MasonInstall cspell cpplint mypy markdownlint mdformat beautysh shellcheck shellharden stylua hadolint cmakelang cmakelint clang-format"
 )
 
 -- commented out entries should be installed manually
 require("mason-lspconfig").setup({
 	ensure_installed = {
-		-- c/c++
 		"clangd",
-		-- 'cpplint',
-
-		-- python
 		"ruff",
 		"pyright",
-		-- 'mypy',
-
-		-- markdown
 		"marksman",
-		-- 'markdownlint',
-
-		-- shell
 		"bashls",
-		-- 'beautysh',
-		-- 'shellcheck',
-		-- 'shellharden',
-
-		-- lua
 		"lua_ls",
-		-- 'stylua',
-
-		-- docker
 		"dockerls",
-		-- 'hadolint',
-
-		-- cmake
 		"cmake",
-		-- 'cmakelang',
-		-- 'cmakelint',
 	},
 })
 

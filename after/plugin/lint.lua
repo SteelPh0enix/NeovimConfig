@@ -3,11 +3,12 @@ local lint = require("lint")
 lint.linters_by_ft = {
 	bash = { "bash", "cspell" },
 	zsh = { "zsh", "cspell" },
-	c = { "cspell" },
-	cpp = { "cspell" },
+	c = { "cpplint", "cspell" },
+	cpp = { "cpplint", "cspell" },
 	python = { "ruff", "mypy", "pydocstyle", "cspell" },
 	dockerfile = { "hadolint", "cspell" },
 	markdown = { "markdownlint", "cspell" },
+    cmake = { "cmakelint", "cspell" },
 }
 
 vim.api.nvim_create_autocmd({ "BufWritePost" }, {
