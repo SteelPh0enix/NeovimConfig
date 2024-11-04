@@ -51,6 +51,14 @@ formatter.setup({
             require("formatter.filetypes.cpp").clangformat,
         },
 
+        python = {
+            require("formatter.filetypes.python").ruff,
+        },
+
+        markdown = {
+            require("formatter.filetypes.markdown").mdformat,
+        },
+
 		-- Use the special "*" filetype for defining formatter configurations on
 		-- any filetype
 		["*"] = {
