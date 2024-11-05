@@ -12,4 +12,4 @@ require("nvim-tree").setup({
 
 local tree_api = require("nvim-tree.api")
 vim.keymap.set("n", "<Leader>fs", tree_api.tree.toggle)
-vim.keymap.set("n", "<Leader>ff", tree_api.tree.find_file)
+vim.keymap.set("n", "<Leader>ft", tree_api.tree.find_file)
