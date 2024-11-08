@@ -38,6 +38,7 @@ require("lazy").setup({
 	{ "hrsh7th/nvim-cmp" },
 	{ "mhartington/formatter.nvim" },
 	{ "mfussenegger/nvim-lint" },
+    { "saadparwaiz1/cmp_luasnip" },
 	{
 		"L3MON4D3/LuaSnip",
 		version = "v2.*",
@@ -128,4 +129,8 @@ require("lazy").setup({
 			})
 		end,
 	},
+    {
+        'willothy/wezterm.nvim',
+        config = true
+    }
 })

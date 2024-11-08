@@ -1,6 +1,8 @@
 local cmp = require("cmp")
 local luasnip = require("luasnip")
 
+require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./snippets/" } })
+
 cmp.setup({
 	mapping = cmp.mapping.preset.insert({
 		["<CR>"] = cmp.mapping(function(fallback)
@@ -45,7 +47,7 @@ cmp.setup({
 	sources = cmp.config.sources({
 		{ name = "nvim_lsp" },
 		{ name = "luasnip" },
-        { name = "path" },
+		{ name = "path" },
 	}, {
 		{ name = "buffer" },
 	}),
