@@ -38,7 +38,7 @@ require("lazy").setup({
 	{ "hrsh7th/nvim-cmp" },
 	{ "mhartington/formatter.nvim" },
 	{ "mfussenegger/nvim-lint" },
-    { "saadparwaiz1/cmp_luasnip" },
+	{ "saadparwaiz1/cmp_luasnip" },
 	{
 		"L3MON4D3/LuaSnip",
 		version = "v2.*",
@@ -92,7 +92,7 @@ require("lazy").setup({
 			provider = "openai",
 			openai = {
 				endpoint = "http://steelph0enix.pc:51536/",
-				["local"] = true,
+				api_key_name = "",
 			},
 		},
 		build = "make",
@@ -129,8 +129,8 @@ require("lazy").setup({
 			})
 		end,
 	},
-    {
-        'willothy/wezterm.nvim',
-        config = true
-    }
+	{
+		"willothy/wezterm.nvim",
+		config = true,
+	},
 })
