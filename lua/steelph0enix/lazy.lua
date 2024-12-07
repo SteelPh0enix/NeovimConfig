@@ -133,4 +133,6 @@ require("lazy").setup({
 		"willothy/wezterm.nvim",
 		config = true,
 	},
+	-- color picker
+    { "uga-rosa/ccc.nvim" },
 })
