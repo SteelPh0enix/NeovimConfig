@@ -90,13 +90,14 @@ require("lazy").setup({
 		version = false,
 		opts = {
 			provider = "openai",
+			auto_suggestions_provider = "openai",
 			openai = {
 				endpoint = "http://steelph0enix.pc:51536/",
 				api_key_name = "",
 			},
 		},
-		build = "make",
-		-- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false",
+		build = "make BUILD_FROM_SOURCE=true",
+		-- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource true",
 		dependencies = {
 			"stevearc/dressing.nvim",
 			"nvim-lua/plenary.nvim",
