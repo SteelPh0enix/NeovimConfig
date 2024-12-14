@@ -4,9 +4,13 @@
 
 -- nvim-tree requires 24-bit color palette, so termguicolors should be set to true
 require("nvim-tree").setup({
+	reload_on_bufenter = true,
 	view = {
-		width = 40,
+		width = 50,
 		-- adaptive_size = true,
+	},
+	update_focused_file = {
+		enable = true,
 	},
 })
 
