@@ -31,7 +31,7 @@ require("mason").setup({})
 vim.keymap.set(
 	"ca",
 	"MasonInstallMissing",
-	"MasonInstall cspell cpplint mypy markdownlint mdformat beautysh shellcheck shellharden stylua hadolint cmakelang cmakelint clang-format npm-groovy-lint"
+	"MasonInstall cspell cpplint mypy markdownlint mdformat beautysh shellcheck shellharden stylua hadolint cmakelang cmakelint clang-format npm-groovy-lint cpptools debugpy"
 )
 
 -- commented out entries should be installed manually

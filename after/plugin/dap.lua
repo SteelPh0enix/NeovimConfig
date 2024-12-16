@@ -38,6 +38,8 @@ vim.keymap.set("n", "<Leader>ds", function()
 	widgets.centered_float(widgets.scopes)
 end)
 
+local mason_exec_dir = vim.fn.stdpath("data") .. "/mason/bin"
+
 dap.adapters.gdb = {
 	id = "gdb",
 	type = "executable",
@@ -45,22 +47,40 @@ dap.adapters.gdb = {
 	args = { "--interpreter=dap", "--eval-command", "set print pretty on" },
 }
 
-dap.adapters.cppgdb = {
-	id = "cppdbg",
-	type = "executable",
-    command = '',
-}
+if USING_WINDOWS() then
+	dap.adapters.cppgdb = {
+		id = "cppdbg",
+		type = "executable",
+		command = mason_exec_dir .. "/OpenDebugAD7.exe",
+		options = {
+			detached = true,
+		},
+	}
+else
+	dap.adapters.cppdbg = {
+		id = "cppdbg",
+		type = "executable",
+		command = mason_exec_dir .. "/OpenDebugAD7",
+	}
+end
 
 dap.configurations.c = {
 	{
 		name = "Launch C/C++ app",
-		type = "gdb",
+		type = "cppdbg",
 		request = "launch",
 		program = function()
 			return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
 		end,
 		cwd = "${workspaceFolder}",
-		stopAtBeginningOfMainSubprogram = true,
+		stopAtEntry = true,
+		setupCommands = {
+			{
+				text = "-enable-pretty-printing",
+				description = "enable pretty printing",
+				ignoreFailures = false,
+			},
+		},
 	},
 }
 
