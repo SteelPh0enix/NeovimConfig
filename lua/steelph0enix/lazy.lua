@@ -20,6 +20,14 @@ else
 	avante_build_cmd = "make BUILD_FROM_SOURCE=true"
 end
 
+
+local lua_json_install_cmd = ""
+if USING_WINDOWS() then
+	lua_json_install_cmd = "powershell ./install.ps1"
+else
+	lua_json_install_cmd = "./install.sh"
+end
+
 require("lazy").setup({
 	-- async i/o
 	{ "nvim-neotest/nvim-nio" },
@@ -144,4 +152,6 @@ require("lazy").setup({
 	},
 	-- color picker
 	{ "uga-rosa/ccc.nvim" },
+	-- json5 support
+	{ "Joakker/lua-json5", run = lua_json_install_cmd },
 })
