@@ -1,3 +1,5 @@
+require("steelph0enix.utils")
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	vim.fn.system({
@@ -10,6 +12,13 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	})
 end
 vim.opt.rtp:prepend(lazypath)
+
+local avante_build_cmd = ""
+if USING_WINDOWS() then
+	avante_build_cmd = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource true"
+else
+	avante_build_cmd = "make BUILD_FROM_SOURCE=true"
+end
 
 require("lazy").setup({
 	-- async i/o
@@ -96,8 +105,7 @@ require("lazy").setup({
 				api_key_name = "",
 			},
 		},
-		build = "make BUILD_FROM_SOURCE=true",
-		-- build = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource true",
+		build = avante_build_cmd,
 		dependencies = {
 			"stevearc/dressing.nvim",
 			"nvim-lua/plenary.nvim",
@@ -135,5 +143,5 @@ require("lazy").setup({
 		config = true,
 	},
 	-- color picker
-    { "uga-rosa/ccc.nvim" },
+	{ "uga-rosa/ccc.nvim" },
 })
