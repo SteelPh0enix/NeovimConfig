@@ -15,9 +15,9 @@ vim.opt.rtp:prepend(lazypath)
 
 local avante_build_cmd = ""
 if USING_WINDOWS() then
-	avante_build_cmd = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource true"
+	avante_build_cmd = "powershell -ExecutionPolicy Bypass -File Build.ps1 -BuildFromSource false"
 else
-	avante_build_cmd = "make BUILD_FROM_SOURCE=true"
+	avante_build_cmd = "make BUILD_FROM_SOURCE=false"
 end
 
 
