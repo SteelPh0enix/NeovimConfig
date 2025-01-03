@@ -35,11 +35,6 @@ end)
 vim.keymap.set({ "n", "v" }, "<Leader>dp", function()
 	widgets.preview()
 end)
-vim.keymap.set("n", "<Leader>dj", function()
-	dapvsc.load_launchjs(vim.fn.getcwd() .. "/.vscode/launch.json", nil)
-end)
-
-local mason_exec_dir = vim.fn.stdpath("data") .. "/mason/bin"
 
 dap.adapters.gdb = {
 	id = "gdb",
@@ -48,20 +43,22 @@ dap.adapters.gdb = {
 	args = { "--interpreter=dap", "--eval-command", "set print pretty on" },
 }
 
+local mason_cpptools_dir = vim.fn.stdpath("data") .. "/mason/packages/cpptools"
+
 if USING_WINDOWS() then
-	dap.adapters.cppgdb = {
+	dap.adapters.cppdbg = {
 		id = "cppdbg",
 		type = "executable",
-		command = mason_exec_dir .. "/OpenDebugAD7.exe",
+		command = mason_cpptools_dir .. "/extension/debugAdapters/bin/OpenDebugAD7.exe",
 		options = {
-			detached = true,
+			detached = false,
 		},
 	}
 else
 	dap.adapters.cppdbg = {
 		id = "cppdbg",
 		type = "executable",
-		command = mason_exec_dir .. "/OpenDebugAD7",
+		command = mason_cpptools_dir .. "/extension/debugAdapters/bin/OpenDebugAD7",
 	}
 end
 
@@ -72,6 +69,29 @@ dap.configurations.c = {
 		request = "launch",
 		program = function()
 			return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+		end,
+		cwd = "${workspaceFolder}",
+		stopAtEntry = true,
+		setupCommands = {
+			{
+				text = "-enable-pretty-printing",
+				description = "enable pretty printing",
+				ignoreFailures = false,
+			},
+		},
+	},
+	{
+		name = "Launch C/C++ app with arguments",
+		type = "cppdbg",
+		request = "launch",
+		program = function()
+			return vim.fn.input("Path to executable: ", vim.fn.getcwd() .. "/", "file")
+		end,
+		args = function()
+			local args_str = vim.fn.input({
+				prompt = "Arguments: ",
+			})
+			return vim.split(args_str, " +")
 		end,
 		cwd = "${workspaceFolder}",
 		stopAtEntry = true,
