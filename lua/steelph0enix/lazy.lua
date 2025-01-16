@@ -20,7 +20,6 @@ else
 	avante_build_cmd = "make BUILD_FROM_SOURCE=false"
 end
 
-
 local lua_json_install_cmd = ""
 if USING_WINDOWS() then
 	lua_json_install_cmd = "powershell ./install.ps1"
@@ -154,4 +153,19 @@ require("lazy").setup({
 	{ "uga-rosa/ccc.nvim" },
 	-- json5 support
 	{ "Joakker/lua-json5", run = lua_json_install_cmd },
+	-- duck!
+	{
+		"tamton-aquib/duck.nvim",
+		config = function()
+			vim.keymap.set("n", "<leader>dd", function()
+				require("duck").hatch()
+			end, {})
+			vim.keymap.set("n", "<leader>dk", function()
+				require("duck").cook()
+			end, {})
+			vim.keymap.set("n", "<leader>da", function()
+				require("duck").cook_all()
+			end, {})
+		end,
+	},
 })
