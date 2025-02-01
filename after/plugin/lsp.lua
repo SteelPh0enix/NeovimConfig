@@ -31,20 +31,20 @@ require("mason").setup({})
 vim.keymap.set(
     "ca",
     "MasonInstallMissing",
-    "MasonInstall cspell cpplint mypy markdownlint mdformat beautysh shellcheck shellharden stylua hadolint cmakelang cmakelint clang-format npm-groovy-lint cpptools debugpy"
+    "MasonInstall cspell cpplint mypy markdownlint mdformat beautysh shellcheck shellharden stylua hadolint cmakelang cmakelint clang-format npm-groovy-lint cpptools debugpy jq"
 )
 
 require("mason-lspconfig").setup({
     ensure_installed = {
-        "clangd",
-        "ruff",
-        "marksman",
         "bashls",
-        "lua_ls",
-        "dockerls",
+        "clangd",
         "cmake",
+        "dockerls",
         "groovyls",
         "jedi_language_server",
+        "lua_ls",
+        "marksman",
+        "ruff",
     },
 })
 
