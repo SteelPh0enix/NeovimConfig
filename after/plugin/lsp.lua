@@ -38,7 +38,7 @@ require("mason-lspconfig").setup({
     ensure_installed = {
         "bashls",
         "clangd",
-        "cmake",
+        -- "cmake", -- needs update to py3.13
         "dockerls",
         "groovyls",
         "jedi_language_server",
