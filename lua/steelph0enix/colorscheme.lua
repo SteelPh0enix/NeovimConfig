@@ -1,5 +1,5 @@
 require("kanagawa").setup({
-	dimInactive = true,
+    dimInactive = true,
 })
 
 vim.cmd("colorscheme kanagawa-wave")

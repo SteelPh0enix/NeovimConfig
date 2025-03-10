@@ -2,7 +2,7 @@
 require("steelph0enix.utils")
 
 if USING_WINDOWS() then
-	require("steelph0enix.powershell")
+    require("steelph0enix.powershell")
 end
 
 require("steelph0enix.python")

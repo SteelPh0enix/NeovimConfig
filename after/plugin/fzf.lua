@@ -8,7 +8,7 @@ vim.keymap.set({ "n", "v" }, "<c-F>q", fzf.quickfix)
 vim.keymap.set({ "n", "v" }, "<c-F>g", fzf.live_grep)
 vim.keymap.set({ "n", "v" }, "<c-F>w", fzf.grep_cword)
 vim.keymap.set("v", "<c-F>v", fzf.grep_visual)
-vim.keymap.set({"n", "v"}, "<c-F>s", fzf.spell_suggest)
+vim.keymap.set({ "n", "v" }, "<c-F>s", fzf.spell_suggest)
 
 vim.keymap.set({ "n", "v" }, "<c-G>f", fzf.git_files)
 vim.keymap.set({ "n", "v" }, "<c-G>s", fzf.git_status)

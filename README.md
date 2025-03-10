@@ -8,25 +8,27 @@ I janked the setup "skeleton" from [here](https://www.youtube.com/watch?v=w7i4am
 
 Make sure you've installed (and added to *PATH* where applicable)
 
-* Latest NeoVim
-* Python (preferably 3.8 upwards, i'm currently running 3.12 as of writing this)
-* DebugPy installed in proper virtualenv (see `after/plugin/dap.lua` for details)
-* C/C++ toolchain (GCC preferably)
-* [cpptools](https://github.com/microsoft/vscode-cpptools/releases) - unzip to `cpptools` in user directory (see `after/plugin/dap.lua` for details)
-* ruff-lsp installed system-wide along with ruff
-* Ripgrep/fd for Telescope
-* NodeJS (for Markdown plugin)
+- Latest NeoVim
+- Python (preferably 3.8 upwards, i'm currently running 3.12 as of writing this)
+- DebugPy installed in proper virtualenv (see `after/plugin/dap.lua` for details)
+- C/C++ toolchain (GCC preferably)
+- [cpptools](https://github.com/microsoft/vscode-cpptools/releases) - unzip to `cpptools` in user directory (see `after/plugin/dap.lua` for details)
+- ruff-lsp installed system-wide along with ruff
+- Ripgrep/fd for Telescope
+- NodeJS (for Markdown plugin)
 
 ## Installation
 
 Put this config as-is in NeoVim's configuration directory.
 
 For Windows it's `$env:LOCALAPPDATA/nvim` (or `%APPDATALOCAL%/nvim` if you're into that `cmd.exe` syntax)
+
 ```powershell
 git clone git@github.com:SteelPh0enix/NeovimConfig.git $env:LOCALAPPDATA/nvim
 ```
 
 For Linux it's `~/.config/nvim`
+
 ```sh
 git clone git@github.com:SteelPh0enix/NeovimConfig.git ~/.config/nvim
 ```
@@ -39,10 +41,10 @@ Lazy should automatically setup everything. Wait until Lazy, Mason and treesitte
 - Telescope - search utility
 - Treesitter - syntax support
 - lsp-zero - bundle of LSP plugins, including
-    - Mason and Mason-LSPConfig for installing LSPs
-    - nvim-lspconfig for LSP support in neovim
-    - nvim-cmp and cmp-nvim-lsp for autocompletion
-    - LuaSnip for snippets
+  - Mason and Mason-LSPConfig for installing LSPs
+  - nvim-lspconfig for LSP support in neovim
+  - nvim-cmp and cmp-nvim-lsp for autocompletion
+  - LuaSnip for snippets
 - nvim-tree - filesystem browser
 - trouble - error/warnings list
 - lualine - better statusline
@@ -59,6 +61,7 @@ If a shortcut is not described here, it's either left default or not bound.
 ### General
 
 Leader is bound to `<Space>`.
+
 - Exit terminal mode - `<Esc>`
 - Turn off highlight after search - `<F12>`
 
@@ -101,7 +104,7 @@ Leader is bound to `<Space>`.
 - Go to implementation - `gi`
 - Go to type definition - `go`
 - Go to references - `gr`
-- Go to signature help  - `gs`
+- Go to signature help - `gs`
 - Rename - `<F2>`
 - Format - `<F3>`
 - Code action - `<F4>`

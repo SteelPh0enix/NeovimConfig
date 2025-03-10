@@ -16,4 +16,3 @@ ccc.setup({
 })
 
 vim.keymap.set("n", "<C-c>", "<cmd>CccPick<cr>")
-

@@ -53,6 +53,9 @@ vim.opt.signcolumn = "yes"
 -- (we pick the 1st one and hope for the best)
 local spellfile_dir = vim.api.nvim_list_runtime_paths()[1]
 vim.opt.spellfile = {
-	spellfile_dir .. PATH_SEPARATOR() .. "spell" .. PATH_SEPARATOR() .. "en.utf-8.add",
-	spellfile_dir .. PATH_SEPARATOR() .. "spell" .. PATH_SEPARATOR() .. "pl.utf-8.add",
+    spellfile_dir .. PATH_SEPARATOR() .. "spell" .. PATH_SEPARATOR() .. "en.utf-8.add",
+    spellfile_dir .. PATH_SEPARATOR() .. "spell" .. PATH_SEPARATOR() .. "pl.utf-8.add",
 }
+
+-- for avante
+vim.opt.laststatus = 3
