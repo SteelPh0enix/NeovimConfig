@@ -17,3 +17,4 @@ vim.keymap.set("n", "<Leader>do", ":diffoff!")
 
 -- normal save
 vim.keymap.set("n", "<C-s>", "<cmd>w<cr>")
+vim.keymap.set("n", "<C-S-s>", "<cmd>wa<cr>")
