@@ -4,6 +4,11 @@ This is a relatively simple NeoVim configuration for my daily needs. I mostly wr
 
 I jank'd the setup "skeleton" from [here](https://www.youtube.com/watch?v=w7i4amO_zaE). I recommend watching it if you're looking for your own setup.
 
+This version of configuration is more focused on using native neovim functionalities, instead of plugins.
+I had an idea to do that for a while, and recent neovim updates with LSP changes made me finally pull the trigger.
+I've decided to start from scratch, list all the requirements i have and think of a way to implement them based on neovim documentation.
+Some core plugins (like Mason, nvim-tree, fzf and treesitter) will remain, but i'll try to get rid of the most of the remaining ones.
+
 ## Requirements
 
 Make sure you've installed (and added to *PATH* where applicable)
