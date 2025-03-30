@@ -1,5 +1,5 @@
 -- *real* entry point
--- Always load first, contains global utility functions.
+-- Always load utils first.
 require("steelph0enix.utils")
 
 if USING_WINDOWS() then

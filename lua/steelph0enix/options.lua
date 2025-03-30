@@ -52,7 +52,7 @@ vim.opt.signcolumn = "yes"
 -- global statusline
 vim.opt.laststatus = 3
 
--- enable confirmations, instead of failing
+-- enable confirmations, instead of failing automatically
 vim.opt.confirm = true
 
 -- display settings
