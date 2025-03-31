@@ -1,5 +1,5 @@
 require("flexoki").setup({
-    variant = "moon", -- auto, moon, or dawn
+    variant = "auto", -- auto, moon, or dawn
     dim_inactive_windows = true,
     extend_background_behind_borders = true,
 
@@ -44,20 +44,20 @@ require("flexoki").setup({
         h6 = "cyan_two"
     },
 
-    palette = {
+    -- palette = {
         -- Override the builtin palette per variant
         -- moon = {
         --     base = '#100f0f',
         --     overlay = '#1c1b1a',
         -- },
-    },
+    -- },
 
-    highlight_groups = {
+    -- highlight_groups = {
         -- Comment = { fg = "subtle" },
         -- VertSplit = { fg = "muted", bg = "muted" },
-    },
+    -- },
 
-    before_highlight = function(group, highlight, palette)
+    -- before_highlight = function(group, highlight, palette)
         -- Disable all undercurls
         -- if highlight.undercurl then
         --     highlight.undercurl = false
@@ -67,7 +67,7 @@ require("flexoki").setup({
         -- if highlight.fg == palette.blue_two then
         --     highlight.fg = palette.cyan_two
         -- end
-    end
+    -- end
 })
 
 vim.cmd("colorscheme flexoki")

@@ -1,3 +1,5 @@
+-- All LSP/diagnostics/development-related configuration.
+
 vim.diagnostic.config({
     virtual_lines = true,
     severity_sort = true,

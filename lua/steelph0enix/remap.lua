@@ -1,3 +1,6 @@
+-- This file contains only mappings for core/"vanilla" stuff.
+-- For LSP-related mappings, see `dev.lua`
+
 -- leader key
 vim.g.mapleader = " "
 
@@ -15,6 +18,6 @@ vim.keymap.set("n", "<Leader>dt", ":diffthis")
 vim.keymap.set("n", "<Leader>dd", ":diffoff!")
 vim.keymap.set("n", "<Leader>do", ":diffoff!")
 
--- normal save
+-- "normal" saving
 vim.keymap.set("n", "<C-s>", "<cmd>w<cr>")
 vim.keymap.set("n", "<C-S-s>", "<cmd>wa<cr>")
