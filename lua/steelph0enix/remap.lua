@@ -21,3 +21,6 @@ vim.keymap.set("n", "<Leader>do", ":diffoff!")
 -- "normal" saving
 vim.keymap.set("n", "<C-s>", "<cmd>w<cr>")
 vim.keymap.set("n", "<C-S-s>", "<cmd>wa<cr>")
+
+-- trigger omni-completion on ctrl-space
+vim.keymap.set({ "n", "i" }, "<C-Space>", "<C-x><C-o>")

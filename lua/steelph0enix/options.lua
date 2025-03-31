@@ -40,7 +40,7 @@ vim.opt.title = true
 vim.opt.undofile = true
 
 -- Set better popup experience
-vim.opt.completeopt = { "fuzzy", "menu", "menuone", "noinsert", "preview" }
+vim.opt.completeopt = { "fuzzy", "menu", "menuone", "noselect", "noinsert", "popup" }
 
 -- Set color column at 100 characters by default
 vim.opt.colorcolumn = "80,100,120"
