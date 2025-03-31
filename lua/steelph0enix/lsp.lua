@@ -3,7 +3,7 @@ vim.diagnostic.config({
     severity_sort = true,
 })
 
-vim.lsp.config('*', {
+vim.lsp.config("*", {
     capabilities = {
         textDocument = {
             semanticTokens = {
@@ -13,4 +13,4 @@ vim.lsp.config('*', {
     }
 })
 
-vim.lsp.enable({"clangd"})
+vim.lsp.enable({ "clangd", "luals" })
