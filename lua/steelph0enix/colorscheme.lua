@@ -45,28 +45,28 @@ require("flexoki").setup({
     },
 
     -- palette = {
-        -- Override the builtin palette per variant
-        -- moon = {
-        --     base = '#100f0f',
-        --     overlay = '#1c1b1a',
-        -- },
+    -- Override the builtin palette per variant
+    -- moon = {
+    --     base = '#100f0f',
+    --     overlay = '#1c1b1a',
+    -- },
     -- },
 
     -- highlight_groups = {
-        -- Comment = { fg = "subtle" },
-        -- VertSplit = { fg = "muted", bg = "muted" },
+    -- Comment = { fg = "subtle" },
+    -- VertSplit = { fg = "muted", bg = "muted" },
     -- },
 
     -- before_highlight = function(group, highlight, palette)
-        -- Disable all undercurls
-        -- if highlight.undercurl then
-        --     highlight.undercurl = false
-        -- end
-        --
-        -- Change palette colour
-        -- if highlight.fg == palette.blue_two then
-        --     highlight.fg = palette.cyan_two
-        -- end
+    -- Disable all undercurls
+    -- if highlight.undercurl then
+    --     highlight.undercurl = false
+    -- end
+    --
+    -- Change palette colour
+    -- if highlight.fg == palette.blue_two then
+    --     highlight.fg = palette.cyan_two
+    -- end
     -- end
 })
 

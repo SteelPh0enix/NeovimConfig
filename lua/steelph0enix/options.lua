@@ -56,4 +56,4 @@ vim.opt.laststatus = 3
 vim.opt.confirm = true
 
 -- display settings
-vim.display = {"lastline", "uhex"}
+vim.display = { "lastline", "uhex" }
