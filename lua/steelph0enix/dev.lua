@@ -15,7 +15,7 @@ vim.lsp.config("*", {
     }
 })
 
-vim.lsp.enable({ "clangd", "luals" })
+vim.lsp.enable({ "clangd", "luals", "ruff", "pyright" })
 
 vim.keymap.set("n", "<F3>", vim.lsp.buf.format)
 
@@ -46,6 +46,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
         -- inlay hints
         if client:supports_method("textDocument/inlayHint") then
             vim.lsp.inlay_hint.enable(true)
+        end
+
+        -- use pyright for hover instead of ruff
+        if client.name == "ruff" then
+            client.server_capabilities.hoverProvider = false
         end
     end
 })
