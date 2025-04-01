@@ -1,13 +1,20 @@
 local cc = require("codecompanion")
 cc.setup({
     strategies = {
-        chat = { adapter = "ollama" },
+        chat = {
+            adapter = "ollama",
+            keymaps = {
+                completion = {
+                    modes = {
+                        i = "<C-Space>"
+                    }
+                }
+            }
+        },
         inline = { adapter = "ollama" },
         cmd = { adapter = "ollama" }
     },
-    adapters = {
-        opts = {
-            show_defaults = false,
-        }
+    display = {
+        show_settings = true
     }
 })
