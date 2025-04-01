@@ -3,13 +3,21 @@ return {
     filetypes = { "python" },
     root_markers = { "SConstruct", "pyproject.toml" },
     settings = {
-        pyright = {
+        basedpyright = {
             disableOrganizeImports = true,
-        },
-        python = {
             analysis = {
-                ignore = { "*" }
+                ignore = { "*" },
+                autoImportCompletions = false,
+                autoSearchPaths = true,
+                diagnosticMode = "openFilesOnly",
+                inlayHints = {
+                    variableTypes = true,
+                    callArgumentNames = true,
+                    functionReturnTypes = true,
+                    genericTypes = true,
+                },
+                typeCheckingMode = "standard"
             }
-        }
+        },
     }
 }
