@@ -17,9 +17,11 @@ local packages_to_install = {
     "groovy-language-server"
 }
 
-for _, package_name in ipairs(packages_to_install) do
-    if not registry.is_installed(package_name) then
-        local package = registry.get_package(package_name)
-        package:install()
+registry.refresh(function()
+    for _, package_name in ipairs(packages_to_install) do
+        if not registry.is_installed(package_name) then
+            local package = registry.get_package(package_name)
+            package:install()
+        end
     end
-end
+end)
