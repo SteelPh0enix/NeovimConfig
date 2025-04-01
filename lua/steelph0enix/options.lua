@@ -40,7 +40,7 @@ vim.opt.title = true
 vim.opt.undofile = true
 
 -- Set better popup experience
-vim.opt.completeopt = { "menuone", "preview", "noselect" }
+vim.opt.completeopt = { "fuzzy", "menu", "menuone", "noselect", "noinsert", "popup" }
 
 -- Set color column at 100 characters by default
 vim.opt.colorcolumn = "80,100,120"
@@ -49,13 +49,11 @@ vim.opt.colorcolumn = "80,100,120"
 -- This will avoid an annoying layout shift in the screen
 vim.opt.signcolumn = "yes"
 
--- Default spell check file
--- (we pick the 1st one and hope for the best)
-local spellfile_dir = vim.api.nvim_list_runtime_paths()[1]
-vim.opt.spellfile = {
-    spellfile_dir .. PATH_SEPARATOR() .. "spell" .. PATH_SEPARATOR() .. "en.utf-8.add",
-    spellfile_dir .. PATH_SEPARATOR() .. "spell" .. PATH_SEPARATOR() .. "pl.utf-8.add",
-}
-
--- for avante
+-- global statusline
 vim.opt.laststatus = 3
+
+-- enable confirmations, instead of failing automatically
+vim.opt.confirm = true
+
+-- display settings
+vim.display = { "lastline", "uhex" }
