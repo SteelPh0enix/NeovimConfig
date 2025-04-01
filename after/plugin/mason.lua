@@ -12,7 +12,10 @@ require("mason").setup({
 })
 
 local registry = require("mason-registry")
-local packages_to_install = { "lua-language-server", "clangd", "ruff", "basedpyright", "mypy", "json-lsp" }
+local packages_to_install = {
+    "lua-language-server", "clangd", "ruff", "basedpyright", "mypy", "json-lsp",
+    "groovy-language-server"
+}
 
 for _, package_name in ipairs(packages_to_install) do
     if not registry.is_installed(package_name) then
