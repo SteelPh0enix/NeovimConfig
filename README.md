@@ -15,9 +15,10 @@ Make sure you've installed (and added to *PATH* where applicable)
 
 - Latest NeoVim
 - Python (preferably 3.8 upwards, i'm currently running 3.13 as of writing this)
-- C/C++ toolchain (GCC preferably)
-- Ripgrep/fd for Telescope
-- NodeJS (for Markdown plugin)
+- C/C++ toolchain
+- `fzf`, `git`, `ripgrep` and `fd` for `fzf-lua`
+
+Run `:checkhealth` after installation to see for missing optional requirements.
 
 ## Installation
 
@@ -36,4 +37,3 @@ git clone git@github.com:SteelPh0enix/NeovimConfig.git $env:LOCALAPPDATA/nvim
 ```
 
 Lazy should automatically setup everything. Wait until Lazy, Mason and treesitter finishes installing stuff after first run.
-Then, run `:MasonInstallMissing` to install missing Mason packages that weren't installed automatically.
