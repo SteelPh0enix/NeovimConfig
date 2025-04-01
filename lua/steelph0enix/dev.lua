@@ -31,18 +31,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
             vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
         end
 
-        -- format on save
-        if not client:supports_method("textDocument/willSaveWaitUntil")
-            and client:supports_method("textDocument/formatting") then
-            vim.api.nvim_create_autocmd("BufWritePre", {
-                group = dev_group,
-                buffer = args.buf,
-                callback = function()
-                    vim.lsp.buf.format({ bufnr = args.buf, id = client.id, timeout_ms = 1000 })
-                end,
-            })
-        end
-
         -- inlay hints
         if client:supports_method("textDocument/inlayHint") then
             vim.lsp.inlay_hint.enable(true)
