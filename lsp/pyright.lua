@@ -8,6 +8,7 @@ return {
             analysis = {
                 ignore = { "*" },
                 autoImportCompletions = false,
+                useLibraryCodeForTypes = true,
                 autoSearchPaths = true,
                 diagnosticMode = "openFilesOnly",
                 inlayHints = {

@@ -15,7 +15,7 @@ vim.lsp.config("*", {
     }
 })
 
-vim.lsp.enable({ "clangd", "luals", "ruff", "pyright" })
+vim.lsp.enable({ "clangd", "luals", "ruff", "pyright", "jsonls" })
 
 vim.keymap.set("n", "<F3>", vim.lsp.buf.format)
 
