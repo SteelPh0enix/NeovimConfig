@@ -32,6 +32,7 @@ require("nvim-treesitter.configs").setup({
         "toml",
         "vim",
         "vimdoc",
+        "yaml",
     },
     -- Install parsers synchronously
     sync_install = false,

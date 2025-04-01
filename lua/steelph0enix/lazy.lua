@@ -16,7 +16,10 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
     -- color scheme
-    { "nuvic/flexoki-nvim",                         name = "flexoki" },
+    {
+        "nuvic/flexoki-nvim",
+        name = "flexoki"
+    },
     -- treesitter
     {
         "nvim-treesitter/nvim-treesitter",
@@ -34,6 +37,21 @@ require("lazy").setup({
     {
         "ibhagwan/fzf-lua",
         dependencies = { "nvim-tree/nvim-web-devicons" },
+        opts = {}
+    },
+    -- LLM stuff
+    {
+        "olimorris/codecompanion.nvim",
+        config = true,
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-treesitter/nvim-treesitter"
+        }
+    },
+    -- markdown rendering
+    {
+        "MeanderingProgrammer/render-markdown.nvim",
+        dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
         opts = {}
     }
 })
