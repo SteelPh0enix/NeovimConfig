@@ -39,19 +39,16 @@ require("lazy").setup({
         dependencies = { "nvim-tree/nvim-web-devicons" },
         opts = {}
     },
-    -- LLM stuff
-    {
-        "olimorris/codecompanion.nvim",
-        config = true,
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-            "nvim-treesitter/nvim-treesitter"
-        }
-    },
     -- markdown rendering
     {
         "MeanderingProgrammer/render-markdown.nvim",
         dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
         opts = {}
+    },
+    -- telescope
+    {
+        "nvim-telescope/telescope.nvim", 
+        tag = "0.1.8",
+        dependencies = { "nvim-lua/plenary.nvim" }
     }
 })
